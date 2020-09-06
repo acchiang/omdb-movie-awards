@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/omdb-movie-awards/static/css/main.5f361e03.chunk.css",
+    "main.js": "/omdb-movie-awards/static/js/main.166efc01.chunk.js",
+    "main.js.map": "/omdb-movie-awards/static/js/main.166efc01.chunk.js.map",
+    "runtime-main.js": "/omdb-movie-awards/static/js/runtime-main.3693031d.js",
+    "runtime-main.js.map": "/omdb-movie-awards/static/js/runtime-main.3693031d.js.map",
+    "static/js/2.6617eb07.chunk.js": "/omdb-movie-awards/static/js/2.6617eb07.chunk.js",
+    "static/js/2.6617eb07.chunk.js.map": "/omdb-movie-awards/static/js/2.6617eb07.chunk.js.map",
+    "index.html": "/omdb-movie-awards/index.html",
+    "precache-manifest.f80055ec862802176208e58d590a375b.js": "/omdb-movie-awards/precache-manifest.f80055ec862802176208e58d590a375b.js",
+    "service-worker.js": "/omdb-movie-awards/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/omdb-movie-awards/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.6617eb07.chunk.js.LICENSE.txt": "/omdb-movie-awards/static/js/2.6617eb07.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/omdb-movie-awards/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3693031d.js",
+    "static/js/2.6617eb07.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.166efc01.chunk.js"
+  ]
+}
