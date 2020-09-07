@@ -5,6 +5,7 @@ import TableCell from "@material-ui/core/TableCell";
 import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
+import ButtonGroup from "@material-ui/core/ButtonGroup";
 import Button from "@material-ui/core/Button";
 
 function TableData(props) {
@@ -99,6 +100,24 @@ function TableData(props) {
           </TableBody>
         </Table>
       </TableContainer>
+      <ButtonGroup variant="contained">
+        <Button
+          disabled={page === 1}
+          onClick={() => {
+            setPage(page - 1);
+          }}
+        >
+          Prev
+        </Button>
+        <Button
+          onClick={() => {
+            setPage(page + 1);
+          }}
+          disabled={data == null || data.length === 0}
+        >
+          Next
+        </Button>
+      </ButtonGroup>
     </div>
   );
 }
