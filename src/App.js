@@ -17,7 +17,10 @@ function App() {
       <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
       <Typography color="textSecondary">
         Created by Allison Chiang:{" "}
-        <Link href="https://github.com/acchiang">GitHub</Link> ||{" "}
+        <Link href="https://github.com/acchiang/omdb-movie-awards">
+          Source Repo
+        </Link>{" "}
+        || <Link href="https://github.com/acchiang">GitHub</Link> ||{" "}
         <Link href="https://linkedin.com/in/allison-chiang">LinkedIn</Link>
       </Typography>
     </div>

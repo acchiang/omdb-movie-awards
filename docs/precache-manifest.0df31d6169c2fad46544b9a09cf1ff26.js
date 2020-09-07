@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5b7dc316fabdd13e4be34da2391f02a3",
+    "revision": "39a9056b5a3f2324a33877d905a86c21",
     "url": "/omdb-movie-awards/index.html"
   },
   {
-    "revision": "ede675bad428d928056d",
+    "revision": "8e6b27bd17f3debfbacc",
     "url": "/omdb-movie-awards/static/css/main.99e8c712.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/omdb-movie-awards/static/js/2.0dff013a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ede675bad428d928056d",
-    "url": "/omdb-movie-awards/static/js/main.74e1912b.chunk.js"
+    "revision": "8e6b27bd17f3debfbacc",
+    "url": "/omdb-movie-awards/static/js/main.4e5bbfa1.chunk.js"
   },
   {
     "revision": "a8c525989331f1ed0d61",
