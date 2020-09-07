@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
@@ -24,23 +24,34 @@ function Nominations(props) {
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small">Remove</Button>
+            <Button
+              size="small"
+              onClick={() => {
+                setNominationData(
+                  nominationData.filter(function (nom) {
+                    return nom.Title !== Title;
+                  })
+                );
+              }}
+            >
+              Remove
+            </Button>
           </CardActions>
         </Card>
       </div>
     );
   };
 
-  const nomCards = (
-    <div id="nominationCards">
-      {nominationData.map((nom, i) => {
-        console.log("Entered");
-        // Return the element. Also pass key
-        return <NomCard Title={nom.Title} Year={nom.Year} />;
-      })}
-    </div>
-  );
-  console.log(nomCards);
+  const nomCards = useMemo(() => {
+    console.log("new cards");
+    return (
+      <div id="nominationCards">
+        {nominationData.map((nom, i) => {
+          return <NomCard Title={nom.Title} Year={nom.Year} />;
+        })}
+      </div>
+    );
+  }, [nominationData]);
 
   return nomCards;
 }
