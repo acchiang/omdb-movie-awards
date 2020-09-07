@@ -7,10 +7,22 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import Button from "@material-ui/core/Button";
-import "./TableData.css";
+
+import { makeStyles } from "@material-ui/core/styles";
+const useStyles = makeStyles({
+  tableContainer: {
+    width: "95%",
+    padding: 10,
+  },
+
+  paginator: {
+    margin: 10,
+  },
+});
 
 function TableData(props) {
   const { searchInput, nominationData, setNominationData } = props;
+  const classes = useStyles();
   const [data, setData] = React.useState();
   const [page, setPage] = React.useState(1);
 
@@ -79,8 +91,8 @@ function TableData(props) {
   }, [data, nominationData, setNominationData]);
 
   return (
-    <div id="tableContainer">
-      <div id="paginator">
+    <div className={classes.tableContainer}>
+      <div className={classes.paginator}>
         <ButtonGroup variant="contained">
           <Button
             disabled={page === 1}
