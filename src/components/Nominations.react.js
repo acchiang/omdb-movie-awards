@@ -10,6 +10,10 @@ const useStyles = makeStyles({
     paddingLeft: 20,
     paddingBottom: 20,
   },
+  submissionButton: {
+    paddingLeft: 20,
+    paddingBottom: 30,
+  },
 });
 function Nominations(props) {
   const { nominationData, setNominationData } = props;
@@ -19,13 +23,15 @@ function Nominations(props) {
       <div className={classes.cardContainer}>
         <Card>
           <CardContent>
-            <Typography color="textSecondary" gutterBottom>
+            <Typography color="textSecondary">
               {Title}, {Year}
             </Typography>
           </CardContent>
           <CardActions>
             <Button
               size="small"
+              variant="outlined"
+              color="secondary"
               onClick={() => {
                 setNominationData(
                   nominationData.filter(function (nom) {
@@ -52,7 +58,24 @@ function Nominations(props) {
     );
   }, [nominationData]);
 
-  return nomCards;
+  return (
+    <div>
+      <div className={classes.submissionButton}>
+        <Button
+          variant="contained"
+          color="primary"
+          disabled={nominationData.length < 5}
+          onClick={() => {
+            setNominationData([]);
+            window.alert("Thank you for submitting your nominations!");
+          }}
+        >
+          Submit your 5 nominations!
+        </Button>
+      </div>
+      {nomCards}
+    </div>
+  );
 }
 
 export default Nominations;
