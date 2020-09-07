@@ -3,7 +3,7 @@ import "./App.css";
 import SearchBar from "./components/SearchBar.react";
 import TableData from "./components/TableData.react";
 import Nominations from "./components/Nominations.react";
-import { Paper, Typography } from "@material-ui/core";
+import { Paper, Typography, Link } from "@material-ui/core";
 
 function App() {
   const [searchInput, setSearchInput] = useState("");
@@ -13,7 +13,13 @@ function App() {
       <Typography variant="h3" component="h3">
         The Shoppies
       </Typography>
+      <Typography color="textSecondary">Welcome!</Typography>
       <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
+      <Typography color="textSecondary">
+        Created by Allison Chiang:{" "}
+        <Link href="https://github.com/acchiang">GitHub</Link> ||{" "}
+        <Link href="https://linkedin.com/in/allison-chiang">LinkedIn</Link>
+      </Typography>
     </div>
   );
 
