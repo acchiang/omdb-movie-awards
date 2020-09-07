@@ -45,7 +45,23 @@ function TableData(props) {
       const Nominate = (
         <Button
           onClick={() => {
-            setNominationData([...nominationData, { Title, Year }]);
+            let isNewNomination = true;
+            nominationData.forEach((item, index) => {
+              if (item.Title === Title && isNewNomination) {
+                window.alert("You already nominated this movie!");
+                isNewNomination = false;
+                return;
+              }
+            });
+            if (isNewNomination) {
+              if (nominationData.length >= 5) {
+                window.alert(
+                  "You can only nominate up to 5 movies. Remove one to add another."
+                );
+              } else {
+                setNominationData([...nominationData, { Title, Year }]);
+              }
+            }
           }}
         >
           Nominate
