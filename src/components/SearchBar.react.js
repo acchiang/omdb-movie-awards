@@ -24,7 +24,7 @@ function SearchBar(props) {
     <div className={classes.searchBar}>
       <TextField
         id="outlined-basic"
-        label="Search movie title"
+        label="Search movie title (eg. Star Wars, Hello, Test, etc)"
         variant="outlined"
         fullWidth={true}
         value={searchInput}

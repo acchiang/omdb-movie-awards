@@ -7,6 +7,7 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
 
 import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles({
@@ -90,6 +91,16 @@ function TableData(props) {
     return rowsData;
   }, [data, nominationData, setNominationData]);
 
+  const emptyView = useMemo(() => {
+    if (rows.length === 0) {
+      return (
+        <Typography color="textSecondary">
+          Oops, no results (yet)! Try searching something more specific.{" "}
+        </Typography>
+      );
+    }
+  }, [rows.length]);
+
   return (
     <div className={classes.tableContainer}>
       <div className={classes.paginator}>
@@ -106,12 +117,13 @@ function TableData(props) {
             onClick={() => {
               setPage(page + 1);
             }}
-            disabled={data == null || data.length === 0}
+            disabled={data == null || data.length < 10}
           >
             Next
           </Button>
         </ButtonGroup>
       </div>
+      {emptyView}
       <TableContainer>
         <Table stickyHeader size="small" aria-label="sticky table">
           <TableHead>
