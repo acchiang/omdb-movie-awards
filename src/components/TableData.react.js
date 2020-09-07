@@ -7,6 +7,7 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import Button from "@material-ui/core/Button";
+import "./TableData.css";
 
 function TableData(props) {
   const searchInput = props.searchInput;
@@ -14,12 +15,12 @@ function TableData(props) {
   const [page, setPage] = React.useState(1);
 
   const columns = [
-    { id: "Title", label: "Title", minWidth: 170 },
-    { id: "Year", label: "Year", minWidth: 100 },
+    { id: "Title", label: "Title", minWidth: 250 },
+    { id: "Year", label: "Year", minWidth: 50 },
     {
       id: "Nominate",
       label: "Nominate",
-      minWidth: 170,
+      minWidth: 50,
     },
   ];
 
@@ -27,6 +28,7 @@ function TableData(props) {
     const { Title, Year } = row;
     const Nominate = (
       <Button
+        variant="primary"
         onClick={() => {
           return;
         }}
@@ -38,7 +40,6 @@ function TableData(props) {
   }
 
   useEffect(() => {
-    console.log(searchInput);
     if (searchInput.length !== 0) {
       fetch(
         `http://www.omdbapi.com/?s=${searchInput}&type=movie&page=${page}&apikey=7faf4e64`,
@@ -59,12 +60,31 @@ function TableData(props) {
         rowsData.push(createData(row));
       });
     }
-    console.log(rowsData);
     return rowsData;
   }, [data]);
 
   return (
-    <div>
+    <div id="tableContainer">
+      <div id="paginator">
+        <ButtonGroup variant="contained">
+          <Button
+            disabled={page === 1}
+            onClick={() => {
+              setPage(page - 1);
+            }}
+          >
+            Prev
+          </Button>
+          <Button
+            onClick={() => {
+              setPage(page + 1);
+            }}
+            disabled={data == null || data.length === 0}
+          >
+            Next
+          </Button>
+        </ButtonGroup>
+      </div>
       <TableContainer>
         <Table stickyHeader aria-label="sticky table">
           <TableHead>
@@ -100,24 +120,6 @@ function TableData(props) {
           </TableBody>
         </Table>
       </TableContainer>
-      <ButtonGroup variant="contained">
-        <Button
-          disabled={page === 1}
-          onClick={() => {
-            setPage(page - 1);
-          }}
-        >
-          Prev
-        </Button>
-        <Button
-          onClick={() => {
-            setPage(page + 1);
-          }}
-          disabled={data == null || data.length === 0}
-        >
-          Next
-        </Button>
-      </ButtonGroup>
     </div>
   );
 }

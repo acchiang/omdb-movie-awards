@@ -10,3 +10,11 @@
   justify-content: center;
   align-items: center;
 }
+
+.paperContainer {
+  padding: 10px;
+}
+
+.tableContainer {
+  width: 700px;
+}
