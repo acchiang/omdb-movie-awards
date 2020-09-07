@@ -3,8 +3,6 @@ import "./SearchBar.css";
 import { TextField } from "@material-ui/core";
 
 function SearchBar(props) {
-  console.log(props);
-  console.log(props.searchInput);
   const searchInput = props.searchInput;
   const setSearchInput = props.setSearchInput;
   const onSearch = useCallback(
