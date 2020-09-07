@@ -43,7 +43,6 @@ function Nominations(props) {
   };
 
   const nomCards = useMemo(() => {
-    console.log("new cards");
     return (
       <div id="nominationCards">
         {nominationData.map((nom, i) => {
