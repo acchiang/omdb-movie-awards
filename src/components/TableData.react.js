@@ -27,7 +27,7 @@ function TableData(props) {
   useEffect(() => {
     if (searchInput.length !== 0) {
       fetch(
-        `http://www.omdbapi.com/?s=${searchInput}&type=movie&page=${page}&apikey=7faf4e64`,
+        `https://www.omdbapi.com/?s=${searchInput}&type=movie&page=${page}&apikey=7faf4e64`,
         {
           method: "GET",
         }

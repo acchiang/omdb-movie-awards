@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/omdb-movie-awards/static/css/main.e688b5f9.chunk.css",
-    "main.js": "/omdb-movie-awards/static/js/main.4a1f85f3.chunk.js",
-    "main.js.map": "/omdb-movie-awards/static/js/main.4a1f85f3.chunk.js.map",
+    "main.js": "/omdb-movie-awards/static/js/main.218cdf0f.chunk.js",
+    "main.js.map": "/omdb-movie-awards/static/js/main.218cdf0f.chunk.js.map",
     "runtime-main.js": "/omdb-movie-awards/static/js/runtime-main.3693031d.js",
     "runtime-main.js.map": "/omdb-movie-awards/static/js/runtime-main.3693031d.js.map",
     "static/js/2.a9b01d3e.chunk.js": "/omdb-movie-awards/static/js/2.a9b01d3e.chunk.js",
     "static/js/2.a9b01d3e.chunk.js.map": "/omdb-movie-awards/static/js/2.a9b01d3e.chunk.js.map",
     "index.html": "/omdb-movie-awards/index.html",
-    "precache-manifest.894c4767095a33135123e60aab2e069c.js": "/omdb-movie-awards/precache-manifest.894c4767095a33135123e60aab2e069c.js",
+    "precache-manifest.3ce9e8f8ac116fa5856fc1b9ca250f99.js": "/omdb-movie-awards/precache-manifest.3ce9e8f8ac116fa5856fc1b9ca250f99.js",
     "service-worker.js": "/omdb-movie-awards/service-worker.js",
     "static/css/main.e688b5f9.chunk.css.map": "/omdb-movie-awards/static/css/main.e688b5f9.chunk.css.map",
     "static/js/2.a9b01d3e.chunk.js.LICENSE.txt": "/omdb-movie-awards/static/js/2.a9b01d3e.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.3693031d.js",
     "static/js/2.a9b01d3e.chunk.js",
     "static/css/main.e688b5f9.chunk.css",
-    "static/js/main.4a1f85f3.chunk.js"
+    "static/js/main.218cdf0f.chunk.js"
   ]
 }
