@@ -10,7 +10,7 @@ import Button from "@material-ui/core/Button";
 import "./TableData.css";
 
 function TableData(props) {
-  const searchInput = props.searchInput;
+  const { searchInput, nominationData, setNominationData } = props;
   const [data, setData] = React.useState();
   const [page, setPage] = React.useState(1);
 
@@ -23,21 +23,6 @@ function TableData(props) {
       minWidth: 50,
     },
   ];
-
-  function createData(row) {
-    const { Title, Year } = row;
-    const Nominate = (
-      <Button
-        variant="primary"
-        onClick={() => {
-          return;
-        }}
-      >
-        Nominate
-      </Button>
-    );
-    return { Title, Year, Nominate };
-  }
 
   useEffect(() => {
     if (searchInput.length !== 0) {
@@ -55,13 +40,27 @@ function TableData(props) {
 
   const rows = useMemo(() => {
     let rowsData = [];
+    const createData = (row) => {
+      const { Title, Year } = row;
+      const Nominate = (
+        <Button
+          onClick={() => {
+            setNominationData([...nominationData, { Title, Year }]);
+          }}
+        >
+          Nominate
+        </Button>
+      );
+      return { Title, Year, Nominate };
+    };
+
     if (data != null) {
       data.forEach((row) => {
-        rowsData.push(createData(row));
+        rowsData.push(createData(row, setNominationData));
       });
     }
     return rowsData;
-  }, [data]);
+  }, [data, nominationData, setNominationData]);
 
   return (
     <div id="tableContainer">
@@ -86,7 +85,7 @@ function TableData(props) {
         </ButtonGroup>
       </div>
       <TableContainer>
-        <Table stickyHeader aria-label="sticky table">
+        <Table stickyHeader size="small" aria-label="sticky table">
           <TableHead>
             <TableRow>
               {columns.map((column) => (
