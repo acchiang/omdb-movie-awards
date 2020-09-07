@@ -11,10 +11,16 @@
   align-items: center;
 }
 
-.paperContainer {
+.headerContainer {
   padding: 10px;
 }
 
 .tableContainer {
   width: 700px;
+}
+
+.bodyContainer {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
 }
