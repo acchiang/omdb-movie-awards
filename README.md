@@ -2,7 +2,7 @@
 
 Welcome to the annual OMDb Movie Awards (aka the Shoppies). Nominate 5 movies of your choosing! 🎥
 
-# [VISIT THE SITE ON GITHUB PAGES](https://acchiang.github.com/omdb-movie-awards).
+# [VISIT THE SITE ON GITHUB PAGES](https://acchiang.github.io/omdb-movie-awards).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
