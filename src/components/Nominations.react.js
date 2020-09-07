@@ -4,12 +4,19 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
 import Typography from "@material-ui/core/Typography";
-
+import { makeStyles } from "@material-ui/core/styles";
+const useStyles = makeStyles({
+  cardContainer: {
+    paddingLeft: 20,
+    paddingBottom: 20,
+  },
+});
 function Nominations(props) {
   const { nominationData, setNominationData } = props;
+  const classes = useStyles();
   const NomCard = ({ Title, Year }) => {
     return (
-      <div>
+      <div className={classes.cardContainer}>
         <Card>
           <CardContent>
             <Typography color="textSecondary" gutterBottom>
